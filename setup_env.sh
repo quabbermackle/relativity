@@ -2,11 +2,14 @@ cd ~
 sudo apt-get update
 sudo apt upgrade -y
 sudo apt install -y dialog
-sudo apt install -y software-properties-common build-essential wget curl nano ssh git
+sudo apt install -y software-properties-common build-essential wget curl nano ssh git tigervnc-viewer tigervnc-standalone-server tigervnc-tools gnome-terminal xfce4 xfce4-terminal netsurf
 sudo apt-add-repository -y ppa:deadsnakes/ppa
 sudo apt-add-repository -y universe
 sudo apt-get update
-sudo apt install -y python3.12 python3.12-dev python3.12-venv
+sudo apt install -y python3.12 python3.12-dev python3.12-venv python-is-python3
+
+vncserver -localhost
+export DISPLAY=":1"
 
 git config --global user.email "spottedalbinojumpingfrog@gmail.com"
 git config --global user.name "Matthew Gunther"
